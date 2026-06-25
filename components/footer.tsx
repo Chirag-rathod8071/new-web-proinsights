@@ -28,9 +28,9 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 font-bold text-lg">
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">P</span>
+                  <span className="text-primary-foreground font-bold">G</span>
               </div>
-              <span>ProInsights Analytics</span>
+              <span>Growticsai</span>
             </Link>
             <p className="text-sm opacity-75">
              AI-driven analytics platform empowering SMEs with enterprise-grade business intelligence. Transform your data into strategic insights that accelerate growth.
@@ -77,18 +77,18 @@ export function Footer() {
             <ul className="space-y-2 text-sm opacity-75">
               <li>
                 <a href="mailto:jaythakkar0303@gmail.com" className="hover:opacity-100 transition-opacity">
-                  jaythakkar0303@gmail.com
+                  Sc.mismarketing@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+917575075469" className="hover:opacity-100 transition-opacity">
-                  +91 7575075469
+                <a href="tel:+918849909840" className="hover:opacity-100 transition-opacity">
+                  +91 8849909840
                 </a>
               </li>
             </ul>
           </div>
            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm opacity-75">
-          <p>©{currentYear} ProInsights Analytics</p>
+          <p>©{currentYear} Growticsai</p>
        
         </div>
         </div>
