@@ -18,33 +18,7 @@ export function AboutSection() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
-
-            {/* ===== Gopi Card ===== */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border">
-              <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
-                <Image src="/Gopi.jpeg" alt="Gopi" width={140} height={140} />
-                <div className="text-center sm:text-left">
-                  <h3 className="text-2xl font-bold text-gray-800">
-                    Gopi Dobariya
-                  </h3>
-                  <p className="text-blue-600 font-semibold">
-                    Co-Founder & Director
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-gray-700 mb-4">
-                Gopi brings strong expertise in business strategy and product
-                innovation, making enterprise-grade analytics accessible to all.
-              </p>
-
-              <p className="text-gray-600">
-                Her customer-centric mindset ensures every solution delivers
-                measurable business value.
-              </p>
-            </div>
-
+     
             {/* ===== Jay Card ===== */}
             <div
               className="bg-white rounded-2xl p-6 shadow-lg border"
@@ -53,16 +27,16 @@ export function AboutSection() {
                 <Image src="/jayt.png" alt="Jay" width={160} height={160} />
                 <div className="text-center sm:text-left">
                   <h3 className="text-2xl font-bold text-gray-800">
-                    Jay Thakkar
+                   Chirag Rathod
                   </h3>
                   <p className="text-indigo-600 font-semibold">
-                    Co-Founder & Director
+                   Director
                   </p>
                 </div>
               </div>
 
               <p className="text-gray-700 mb-4">
-                Jay leads technology and operations, ensuring scalable and
+                Chirag leads technology and operations, ensuring scalable and
                 reliable analytics platforms.
               </p>
 
@@ -80,10 +54,10 @@ export function AboutSection() {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-                ProInsights Analytics
+                Growticsai
               </h2>
               <p className="text-lg text-foreground/70 leading-relaxed">
-                ProInsights Analytics is a Startup India certified technology company specializing in digital transformation and data-driven solutions. We partner with government institutions, enterprises, and SMEs to build scalable, secure, and innovative technology solutions.
+                Growticsai is a Startup India certified technology company specializing in digital transformation and data-driven solutions. We partner with government institutions, enterprises, and SMEs to build scalable, secure, and innovative technology solutions.
               </p>
             </div>
 
