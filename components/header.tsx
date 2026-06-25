@@ -22,9 +22,9 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 font-bold text-xl">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">P</span>
+              <span className="text-primary-foreground font-bold">G</span>
             </div>
-            <span className="hidden sm:inline">ProInsights Analytics</span>
+            <span className="hidden sm:inline">Growticsai</span>
           </Link>
 
           {/* Desktop Navigation */}
