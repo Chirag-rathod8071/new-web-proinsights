@@ -1,161 +1,178 @@
-import { Building2, Trophy, Lightbulb } from 'lucide-react'
-import Image from 'next/image';
+```tsx
+import Image from "next/image";
+import { Building2, Trophy, Lightbulb } from "lucide-react";
+
+const pillars = [
+  {
+    icon: <Lightbulb className="w-6 h-6" />,
+    title: "Innovation First",
+    description:
+      "We leverage the latest technologies to build scalable and future-ready digital solutions.",
+  },
+  {
+    icon: <Trophy className="w-6 h-6" />,
+    title: "Excellence",
+    description:
+      "Quality, precision, and performance are at the heart of everything we deliver.",
+  },
+  {
+    icon: <Building2 className="w-6 h-6" />,
+    title: "Enterprise Grade",
+    description:
+      "Reliable, secure, and scalable solutions built for businesses of every size.",
+  },
+];
 
 export function AboutSection() {
   return (
-    <section id="about" className="w-full py-20 sm:py-32 bg-secondary/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <section
-          className="mb-16"
-        >
-          <div className="text-center m-10">
-            <h2 className="text-3xl font-bold text-gray-800">
+    <section
+      id="about"
+      className="w-full bg-secondary/5 py-20 sm:py-32"
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* OUR STORY */}
+        <div className="mb-20">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold text-gray-900">
               Our Story
             </h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto my-4" />
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              From vision to reality — transforming how businesses use data.
+            <div className="mx-auto mt-4 h-1 w-20 rounded bg-blue-600" />
+            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+              From vision to reality — transforming how businesses use
+              technology and data.
             </p>
           </div>
 
-     
-            {/* ===== Jay Card ===== */}
-            <div
-              className="bg-white rounded-2xl p-6 shadow-lg border"
-            >
-              <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
-                <Image src="/jayt.png" alt="Jay" width={160} height={160} />
-                <div className="text-center sm:text-left">
-                  <h3 className="text-2xl font-bold text-gray-800">
-                   Chirag Rathod
-                  </h3>
-                  <p className="text-indigo-600 font-semibold">
-                   Director
-                  </p>
-                </div>
+          <div className="mx-auto max-w-3xl rounded-2xl border bg-white p-8 shadow-lg">
+            <div className="flex flex-col items-center gap-6 sm:flex-row">
+              <Image
+                src="/jayt.png"
+                alt="Chirag Rathod"
+                width={160}
+                height={160}
+                className="rounded-full object-cover"
+                priority
+              />
+
+              <div className="text-center sm:text-left">
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Chirag Rathod
+                </h3>
+
+                <p className="mt-1 font-semibold text-blue-600">
+                  Director
+                </p>
+
+                <p className="mt-4 text-gray-600">
+                  Chirag leads technology and operations while driving
+                  innovation, scalability, and product excellence across every
+                  solution we build.
+                </p>
               </div>
-
-              <p className="text-gray-700 mb-4">
-                Chirag leads technology and operations, ensuring scalable and
-                reliable analytics platforms.
-              </p>
-
-              <p className="text-gray-600">
-                His focus on performance and architecture drives long-term
-                product excellence.
-              </p>
             </div>
-
           </div>
-        </section>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left - Company Info */}
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-                Growticsai
-              </h2>
-              <p className="text-lg text-foreground/70 leading-relaxed">
-                Growticsai is a Startup India certified technology company specializing in digital transformation and data-driven solutions. We partner with government institutions, enterprises, and SMEs to build scalable, secure, and innovative technology solutions.
-              </p>
-            </div>
+        {/* COMPANY */}
+        <div className="mb-20 grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="mb-6 text-4xl font-bold">
+              GrowticsAI
+            </h2>
 
-            {/* Three Pillars */}
-            <div className="space-y-4">
-              {[
-                {
-                  icon: <Lightbulb className="w-6 h-6" />,
-                  title: 'Innovation First',
-                  description: 'We leverage the latest technologies and methodologies to create future-ready solutions.',
-                },
-                {
-                  icon: <Trophy className="w-6 h-6" />,
-                  title: 'Excellence',
-                  description: 'Quality and precision in every line of code and every feature we deliver.',
-                },
-                {
-                  icon: <Building2 className="w-6 h-6" />,
-                  title: 'Enterprise Grade',
-                  description: 'Built to handle enterprise-scale operations with security and reliability.',
-                },
-              ].map((pillar, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="flex-shrink-0 text-primary">
+            <p className="mb-8 leading-8 text-gray-600">
+              GrowticsAI is a technology company focused on digital
+              transformation, AI, analytics, and enterprise software. We help
+              startups, SMEs, enterprises, and government organizations build
+              secure, scalable, and intelligent digital products.
+            </p>
+
+            <div className="space-y-6">
+              {pillars.map((pillar) => (
+                <div
+                  key={pillar.title}
+                  className="flex items-start gap-4"
+                >
+                  <div className="text-blue-600">
                     {pillar.icon}
                   </div>
+
                   <div>
-                    <h3 className="font-bold mb-1">{pillar.title}</h3>
-                    <p className="text-foreground/70 text-sm">{pillar.description}</p>
+                    <h3 className="font-semibold">
+                      {pillar.title}
+                    </h3>
+
+                    <p className="mt-1 text-sm text-gray-600">
+                      {pillar.description}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right - Founder */}
-           <div className="bg-light-background">
-
-      <main className="container mx-auto px-4 sm:px-6 py-10">
-
-        {/* ===== OUR STORY ===== */}
-     
-        {/* ===== MISSION & VISION ===== */}
-        <section 
-          className="mb-16"
-        >
-          <div  className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-800">
+          {/* Mission & Vision */}
+          <div className="rounded-2xl bg-white p-8 shadow-lg">
+            <h2 className="mb-8 text-center text-3xl font-bold">
               Mission & Vision
             </h2>
-            <div className="w-20 h-1 bg-indigo-600 mx-auto my-4" />
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div
-              className="bg-blue-600 text-white rounded-2xl p-6"
-            >
-              <h3 className="text-xl font-bold mb-3">🎯 Our Mission</h3>
-              <p className="text-blue-100">
-                Empower businesses to make smarter decisions through accessible,
-                practical analytics.
-              </p>
+            <div className="space-y-6">
+              <div className="rounded-xl bg-blue-600 p-6 text-white">
+                <h3 className="mb-3 text-xl font-bold">
+                  🎯 Our Mission
+                </h3>
+
+                <p className="text-blue-100">
+                  Empower businesses with modern technology, AI, and analytics
+                  that enable faster and smarter decision-making.
+                </p>
+              </div>
+
+              <div className="rounded-xl bg-indigo-600 p-6 text-white">
+                <h3 className="mb-3 text-xl font-bold">
+                  🚀 Our Vision
+                </h3>
+
+                <p className="text-indigo-100">
+                  Become a globally trusted technology partner delivering
+                  innovative, scalable, and future-ready digital solutions.
+                </p>
+              </div>
             </div>
-
-            <div
-              className="bg-indigo-600 text-white rounded-2xl p-6"
-            >
-              <h3 className="text-xl font-bold mb-3">🚀 Our Vision</h3>
-              <p className="text-indigo-100">
-                Become the most trusted analytics partner for SMEs worldwide.
-              </p>
-            </div>
           </div>
-        </section>
-
-      </main>
- 
-    </div>
         </div>
 
-        {/* Vision & Growth */}
-        <div className="rounded-xl border border-border/40 bg-card p-8 sm:p-12">
-          <div className="grid md:grid-cols-2 gap-12">
+        {/* Bottom */}
+        <div className="rounded-2xl border bg-white p-10 shadow-sm">
+          <div className="grid gap-10 md:grid-cols-2">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-              <p className="text-foreground/70 leading-relaxed">
-                To become the trusted technology partner for enterprises and governments, delivering innovative solutions that drive digital transformation and sustainable growth across industries.
+              <h3 className="mb-4 text-2xl font-bold">
+                Our Vision
+              </h3>
+
+              <p className="leading-8 text-gray-600">
+                We aspire to become a global technology company that helps
+                organizations accelerate digital transformation through
+                innovative software, cloud solutions, AI, and data analytics.
               </p>
             </div>
+
             <div>
-              <h3 className="text-2xl font-bold mb-4">Global Growth</h3>
-              <p className="text-foreground/70 leading-relaxed">
-                We're expanding our footprint to serve US & UK based enterprises and government agencies, bringing Indian quality and value to the global market while building long-term technology partnerships.
+              <h3 className="mb-4 text-2xl font-bold">
+                Global Growth
+              </h3>
+
+              <p className="leading-8 text-gray-600">
+                Our goal is to build long-term partnerships across the US, UK,
+                Europe, and the Middle East while delivering world-class
+                software development services from India.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
+```
